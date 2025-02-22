@@ -1,0 +1,14 @@
+@import 'mixins';
+
+.hero {
+    @include flex-center;
+    flex-direction: column;
+    height: 60vh;
+    background: url('../images/hero.jpg') no-repeat center/cover;
+    color: white;
+    text-align: center;
+
+    .btn {
+        @include button-style;
+    }
+}

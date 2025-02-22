@@ -1,0 +1,11 @@
+@media screen and (max-width: 768px) {
+  nav ul {
+      display: block;
+      text-align: center;
+      
+      li {
+          display: block;
+          margin: 10px 0;
+      }
+  }
+}
