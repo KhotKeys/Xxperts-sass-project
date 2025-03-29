@@ -1,11 +1,25 @@
 @media screen and (max-width: 768px) {
   nav ul {
+    display: block;
+    text-align: center;
+
+    li {
       display: block;
-      text-align: center;
-      
-      li {
-          display: block;
-          margin: 10px 0;
-      }
+      margin: 10px 0;
+    }
+  }
+
+  .hero {
+    height: auto;
+    padding: 20px;
+  }
+
+  .projects .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact form {
+    width: 100%;
+    padding: 0 10px;
   }
 }

@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - Portfolio</title>
+    <title>Log In - Portfolio</title>
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/responsive.css">
     <link rel="icon" type="image/png" href="./images/Xxperts logo.png">
     <style>
         body {
@@ -17,6 +18,13 @@
             border: none;
             font-size: 1rem;
             margin-left: auto;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        a:active {
+            background-color: powderblue;
         }
     </style>
 </head>
@@ -35,43 +43,32 @@
         </nav>
     </header>
 
-    <section class="contact">
-        <h2>Contact Xxperts</h2>
-        <form>
-            <label for="name">Name</label>
-            <input type="text" id="name" placeholder="Your Name">
-
+    <section class="login">
+        <h2>Log In</h2>
+        <form onsubmit="event.preventDefault(); window.location.href='./projects.html';">
             <label for="email">Email</label>
             <input type="email" id="email" placeholder="Your Email">
 
-            <label for="message">Message</label>
-            <textarea id="message" placeholder="Your Message"></textarea>
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Your Password">
 
-            <button type="submit">Send Message</button>
+            <button type="submit">Log In</button>
         </form>
-
         <p>Don't have an account? <a href="./signup.html">Sign Up</a></p>
-        <p>Already have an account? <a href="./login.html">Log In</a></p>
-
-        <div class="social-links">
-            <p>Follow us on:</p>
-            <a href="#">Twitter</a> | 
-            <a href="#">LinkedIn</a> | 
-            <a href="#">Instagram</a>
-        </div>
     </section>
 
     <footer class="footer">
         <div class="footer-content">
-            <p>&copy; 2025 Xxperts. All rights reserved.</p>
-            <div class="social-links">
-                <a href="#">Twitter</a> |
-                <a href="#">LinkedIn</a> |
-                <a href="#">Instagram</a>
+            <div class="footer-links">
+                <a href="./index.html">Home</a>
+                <a href="./about.html">About</a>
+                <a href="./projects.html">Projects</a>
+                <a href="./contact.html">Contact</a>
             </div>
+            <p>&copy; 2025 Xxperts. All rights reserved.</p>
         </div>
     </footer>
-
+    <script src="scripts/nav-toggle.js"></script>
     <script>
         const themeToggle = document.querySelector('.theme-toggle');
         themeToggle.addEventListener('click', () => {

@@ -4,6 +4,30 @@ body {
   color: #333;
   margin: 0;
   padding: 0;
+  background-color: powderblue;
+}
+
+/* General Reset */
+body, h1, h2, p, ul, li, a, input, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: powderblue;
+}
+
+body.dark-theme {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+body.dark-theme a {
+    color: #bb86fc;
 }
 
 header {
@@ -22,6 +46,67 @@ header nav ul li {
 header nav ul li a {
   color: white;
   text-decoration: none;
+}
+
+/* Navigation Bar */
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 2rem;
+    position: relative;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+.nav-links.active {
+    display: flex;
+}
+
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+#mobile-nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
 }
 
 .hero {
@@ -116,4 +201,218 @@ header nav ul li a {
 }
 .contact .social-links {
   margin-top: 20px;
-}/*# sourceMappingURL=main.css.map */
+}
+.contact p {
+  margin: 10px 0;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.contact a {
+  color: #007BFF;
+  text-decoration: none;
+}
+
+.contact a:hover {
+  text-decoration: underline;
+}
+
+/* Signup Section */
+.signup {
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.signup h2 {
+    margin-bottom: 1rem;
+    text-align: center;
+    color: #333;
+}
+
+.signup form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.signup label {
+    font-weight: bold;
+    color: #555;
+}
+
+.signup input {
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.signup button {
+    padding: 0.8rem;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.signup button:hover {
+    background-color: #555;
+}
+
+.signup p {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.signup a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.signup a:hover {
+    text-decoration: underline;
+}
+
+/* Login Section */
+.login {
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.login h2 {
+    margin-bottom: 1rem;
+    text-align: center;
+    color: #333;
+}
+
+.login form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.login label {
+    font-weight: bold;
+    color: #555;
+}
+
+.login input {
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.login button {
+    padding: 0.8rem;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.login button:hover {
+    background-color: #555;
+}
+
+.login p {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.login a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.login a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 2rem;
+    text-align: center;
+}
+
+.footer-links {
+    margin-bottom: 1rem;
+}
+
+.footer-links a {
+    color: #fff;
+    margin: 0 0.5rem;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+
+    #mobile-nav-toggle {
+        display: block;
+    }
+
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        background-color: #fff;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 200px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .signup {
+        padding: 1.5rem;
+    }
+
+    .login {
+        padding: 1.5rem;
+    }
+
+    .footer {
+        padding: 1rem;
+    }
+}

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - Portfolio</title>
+    <title>Responsive Design - Portfolio</title>
     <link rel="stylesheet" href="styles/main.css">
     <link rel="icon" type="image/png" href="./images/Xxperts logo.png">
     <style>
@@ -17,6 +17,16 @@
             border: none;
             font-size: 1rem;
             margin-left: auto;
+        }
+        .nav-links {
+            display: none;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            background-color: powderblue;
+        }
+        .nav-links.show {
+            display: block;
         }
     </style>
 </head>
@@ -35,43 +45,25 @@
         </nav>
     </header>
 
-    <section class="contact">
-        <h2>Contact Xxperts</h2>
-        <form>
-            <label for="name">Name</label>
-            <input type="text" id="name" placeholder="Your Name">
-
-            <label for="email">Email</label>
-            <input type="email" id="email" placeholder="Your Email">
-
-            <label for="message">Message</label>
-            <textarea id="message" placeholder="Your Message"></textarea>
-
-            <button type="submit">Send Message</button>
-        </form>
-
-        <p>Don't have an account? <a href="./signup.html">Sign Up</a></p>
-        <p>Already have an account? <a href="./login.html">Log In</a></p>
-
-        <div class="social-links">
-            <p>Follow us on:</p>
-            <a href="#">Twitter</a> | 
-            <a href="#">LinkedIn</a> | 
-            <a href="#">Instagram</a>
-        </div>
-    </section>
+    <main>
+        <section class="responsive-design">
+            <h2>Responsive Design</h2>
+            <p>Explore how our website adapts to different screen sizes and devices.</p>
+        </section>
+    </main>
 
     <footer class="footer">
         <div class="footer-content">
-            <p>&copy; 2025 Xxperts. All rights reserved.</p>
-            <div class="social-links">
-                <a href="#">Twitter</a> |
-                <a href="#">LinkedIn</a> |
-                <a href="#">Instagram</a>
+            <div class="footer-links">
+                <a href="./index.html">Home</a>
+                <a href="./about.html">About</a>
+                <a href="./projects.html">Projects</a>
+                <a href="./contact.html">Contact</a>
             </div>
+            <p>&copy; 2025 Xxperts. All rights reserved.</p>
         </div>
     </footer>
-
+    <script src="scripts/nav-toggle.js"></script>
     <script>
         const themeToggle = document.querySelector('.theme-toggle');
         themeToggle.addEventListener('click', () => {
@@ -79,6 +71,13 @@
             document.body.style.setProperty('--background-color', isDark ? 'black' : 'powderblue');
             document.body.style.setProperty('--text-color', isDark ? 'white' : 'black');
             themeToggle.textContent = isDark ? '☀️' : '🌙';
+        });
+
+        const navToggle = document.querySelector('.nav-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        navToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('show');
         });
     </script>
 </body>

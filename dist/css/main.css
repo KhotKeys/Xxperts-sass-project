@@ -23,6 +23,33 @@ header nav ul li a {
   text-decoration: none;
 }
 
+.footer {
+  background: #b0e0e6;
+  color: #333;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 50px;
+}
+.footer .footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.footer .footer-content p {
+  margin: 0;
+  font-size: 14px;
+}
+.footer .footer-content .social-links {
+  margin-top: 10px;
+}
+.footer .footer-content .social-links a {
+  color: #333;
+  text-decoration: none;
+  margin: 0 10px;
+}
+.footer .footer-content .social-links a:hover {
+  text-decoration: underline;
+}
+
 .hero {
   display: flex;
   justify-content: center;
@@ -46,17 +73,41 @@ header nav ul li a {
   background: #217dbb;
 }
 
-about {
+.about {
   text-align: center;
   padding: 50px;
   background: #f4f4f4;
 }
-about h2 {
+.about h2 {
   color: #3498db;
 }
-about p {
+.about p {
   max-width: 600px;
   margin: 0 auto;
+  line-height: 1.6;
+}
+.about .project-item {
+  margin-top: 20px;
+}
+.about .project-item img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+.about .project-item p {
+  margin-top: 10px;
+}
+.about button {
+  background: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.about button:hover {
+  background: #217dbb;
 }
 
 .projects {
@@ -81,6 +132,11 @@ about p {
 }
 .projects .project-item h3 {
   margin-top: 10px;
+  color: #3498db;
+}
+.projects .project-item p {
+  margin-top: 5px;
+  line-height: 1.6;
 }
 
 .contact {
@@ -93,7 +149,8 @@ about p {
   display: flex;
   flex-direction: column;
 }
-.contact form input, .contact form textarea {
+.contact form input,
+.contact form textarea {
   margin-bottom: 10px;
   padding: 10px;
   border: 1px solid #ddd;
@@ -108,10 +165,45 @@ about p {
   cursor: pointer;
 }
 .contact form button:hover {
-  background: #bc650d;
+  background: #217dbb;
 }
 .contact .social-links {
   margin-top: 20px;
+}
+.contact .social-links a {
+  color: #3498db;
+  text-decoration: none;
+  margin: 0 10px;
+}
+.contact .social-links a:hover {
+  text-decoration: underline;
+}
+
+.footer {
+  background: #b0e0e6;
+  color: #333;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 50px;
+}
+.footer .footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.footer .footer-content p {
+  margin: 0;
+  font-size: 14px;
+}
+.footer .footer-content .social-links {
+  margin-top: 10px;
+}
+.footer .footer-content .social-links a {
+  color: #333;
+  text-decoration: none;
+  margin: 0 10px;
+}
+.footer .footer-content .social-links a:hover {
+  text-decoration: underline;
 }
 
 @media screen and (max-width: 768px) {
@@ -122,5 +214,16 @@ about p {
   nav ul li {
     display: block;
     margin: 10px 0;
+  }
+  .hero {
+    height: auto;
+    padding: 20px;
+  }
+  .projects .project-grid {
+    grid-template-columns: 1fr;
+  }
+  .contact form {
+    width: 100%;
+    padding: 0 10px;
   }
 }/*# sourceMappingURL=main.css.map */

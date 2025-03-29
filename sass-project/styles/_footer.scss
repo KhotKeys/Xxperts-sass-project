@@ -1,0 +1,31 @@
+.footer {
+  background: #b0e0e6; // Powder blue background
+  color: #333; // Dark text color for contrast
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 50px;
+
+  .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+
+      p {
+          margin: 0;
+          font-size: 14px;
+      }
+
+      .social-links {
+          margin-top: 10px;
+
+          a {
+              color: #333; // Dark text color for links
+              text-decoration: none;
+              margin: 0 10px;
+
+              &:hover {
+                  text-decoration: underline;
+              }
+          }
+      }
+  }
+}

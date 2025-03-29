@@ -8,18 +8,42 @@
     <meta name="author" content="Xxperts">
     <title>Xxperts</title>
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/responsive.css">
     <link rel="icon" type="image/png" href="./images/Xxperts logo.png">
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const themeToggle = document.querySelector('.theme-toggle');
+            const navToggle = document.querySelector('.nav-toggle');
+            const navLinks = document.querySelector('.nav-links');
+
+            themeToggle.addEventListener('click', () => {
+                const isDark = document.body.classList.toggle('dark-theme');
+                document.body.style.setProperty('--background-color', isDark ? 'black' : 'powderblue');
+                document.body.style.setProperty('--text-color', isDark ? 'white' : 'black');
+                themeToggle.textContent = isDark ? '☀️' : '🌙';
+            });
+
+            navToggle.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                navLinks.style.display = navLinks.classList.contains('active') ? 'block' : 'none';
+            });
+        });
+    </script>
 </head>
 <body>
     <header>
-        <nav>
-            <h1>Xxperts</h1>
-            <ul>
-                <li><a href="./index.html">Home</a></li>
-                <li><a href="./about.html">About</a></li>
-                <li><a href="./projects.html">Projects</a></li>
-                <li><a href="./contact.html">Contact</a></li>
-            </ul>
+        <nav class="main-nav">
+            <div class="nav-container">
+                <h1>Xxperts</h1>
+                <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+                <button class="theme-toggle" aria-label="Toggle theme">🌙</button>
+                <ul class="nav-links">
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./about.html">About</a></li>
+                    <li><a href="./projects.html">Projects</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
 
@@ -27,41 +51,52 @@
         <h2>Xxperts Projects</h2>
         <div class="project-grid">
             <div class="project-item">
-                <img src="images/project1.jpg" alt="E-commerce Platform">
+                <img src="images/project1.jpg" alt="E-commerce Platform" class="responsive-img">
                 <h3>Modern E-commerce Redesign</h3>
                 <p>Crafted a user-friendly interface for a leading online retailer, resulting in a 25% increase in sales.</p>
             </div>
         
             <div class="project-item">
-                <img src="images/project2.jpg" alt="Startup Branding">
+                <img src="images/project2.jpg" alt="Startup Branding" class="responsive-img">
                 <h3>Startup Brand Identity</h3>
                 <p>Developed a comprehensive branding strategy for a new tech startup, including logo design, typography, and color palette.</p>
             </div>
         
             <div class="project-item">
-                <img src="./images/Web development.jpg" alt="Web Application">
+                <img src="./images/Web development.jpg" alt="Web Application" class="responsive-img">
                 <h3>Web App Development</h3>
                 <p>Designed and built a responsive web application for a healthcare company, streamlining patient data management and improving user experience.</p>
             </div>
         
             <div class="project-item">
-                <img src="./images/Mobile App Design.jpg" alt="Mobile App Design">
+                <img src="./images/Mobile App Design.jpg" alt="Mobile App Design" class="responsive-img">
                 <h3>Mobile App Design</h3>
                 <p>Created a visually stunning and intuitive mobile app for a fitness startup, resulting in a 50% increase in user engagement.</p>
             </div>
         
             <div class="project-item">
-                <img src="./images/UX Research and Analysis.jpg" alt="UX Research">
+                <img src="./images/UX Research and Analysis.jpg" alt="UX Research" class="responsive-img">
                 <h3>UX Research and Analysis</h3>
                 <p>Conducted in-depth user research and analysis for a financial services company, informing the design of a new customer portal and improving overall user satisfaction.</p>
             </div>
         
             <div class="project-item">
-                <img src="./images/Digital Marketing Strategy.jpg" alt="Digital Marketing">
+                <img src="./images/Digital Marketing Strategy.jpg" alt="Digital Marketing" class="responsive-img">
                 <h3>Digital Marketing Strategy</h3>
                 <p>Developed a comprehensive digital marketing strategy for an e-commerce company, including social media, email marketing, and paid advertising.</p>
             </div>
         </div>
     </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 Xxperts. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#">Twitter</a> |
+                <a href="#">LinkedIn</a> |
+                <a href="#">Instagram</a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

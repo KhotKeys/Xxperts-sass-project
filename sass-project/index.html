@@ -5,13 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Xxperts - Portfolio</title>
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/responsive.css"> <!-- Add responsive stylesheet -->
     <link rel="icon" type="image/png" href="./images/Xxperts logo.png">
 </head>
 <body>
     <header>
         <nav>
             <h1>Xxperts</h1>
-            <ul>
+            <button class="menu-toggle" aria-label="Toggle navigation menu">☰</button> <!-- Add menu toggle for mobile -->
+            <ul class="nav-links">
                 <li><a href="./index.html">Home</a></li>
                 <li><a href="./about.html">About</a></li>
                 <li><a href="./projects.html">Projects</a></li>
@@ -25,5 +27,16 @@
         <p>Crafting beautiful and functional designs.</p>
         <a href="projects.html" class="btn">Xxperts Site</a>
     </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 Xxperts. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#">Twitter</a> |
+                <a href="#">LinkedIn</a> |
+                <a href="#">Instagram</a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
